@@ -1,0 +1,13 @@
+<h2>Room bookings</h2>
+
+<% @booking.each do |booking| %>
+    <b>Name:</b>
+    <p><%= booking.full_name() %></p>
+    <b>Room Type:</b>
+    <p><%= booking.room_type() %></p>
+    <b>Number of nights:</b>
+    <p><%= booking.number_of_nights() %></p>
+    <b>Breakfast</b>
+    <p><%= booking.breakfast() %></p>
+    <br>
+    <% end %>
