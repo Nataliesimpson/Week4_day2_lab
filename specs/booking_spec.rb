@@ -25,6 +25,33 @@ class TestBooking < MiniTest::Test
   
   def test_full_name()
     assert_equal( 'Russell Williams', @booking.full_name() )
+  end
+  
+  def test_number_of_nights()
+    assert_equal( 3, @booking.number_of_nights() )
+  end
+  
+  def test_breakfast()
+    assert_equal( 'yes', @booking.breakfast() )
+  end
+  
+  def test_room_type()
+    assert_equal( 'single', @booking.room_type() )
+  end    
+
+  def test_total_cost()
+    assert_equal( 150, @booking.total_cost() )
   end  
 
+
+
 end    
+
+
+
+
+
+
+
+
+

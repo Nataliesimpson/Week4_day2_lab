@@ -8,7 +8,7 @@ class Booking
     @id = options['id'].to_i
     @first_name = options['first_name']
     @last_name = options['last_name']
-    @number_of_nights = options['options'].to_i
+    @number_of_nights = options['number_of_nights'].to_i
     @breakfast = options['breakfast']
     @room_type = options['room_type']
   end  
@@ -46,6 +46,10 @@ class Booking
 
   def full_name()
     return @first_name.concat(" #{@last_name}")
+  end  
+
+  def total_cost()
+    return @number_of_nights * 50
   end  
 
 
