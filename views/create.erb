@@ -1,4 +1,7 @@
 <%= @booking.full_name() %>
 
 <h5>Your booking is confirmed:</h5>
-<p>Total cost: £<%= @booking.total_cost() %></p>
+
+<p>Total room cost: £<%= @booking.total_cost() %></p>
+
+<p>Room Selection: <%=@booking.room_type.capitalize!() %></p>
