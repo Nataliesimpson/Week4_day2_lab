@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require('pry-byebug')
 require_relative('./models/booking')
+require('json')
 
 get '/booking/new' do
   erb( :new )

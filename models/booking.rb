@@ -2,12 +2,13 @@ require( 'pg' )
 
 class Booking
 
-  attr_reader( :id, :first_name, :last_name, :number_of_nights, :breakfast, :room_type)
+  attr_reader( :id, :first_name, :last_name, :booking_date, :number_of_nights, :breakfast, :room_type)
 
   def initialize(options)
     @id = options['id'].to_i
     @first_name = options['first_name']
     @last_name = options['last_name']
+    @booking_date = options['booking_date']
     @number_of_nights = options['number_of_nights'].to_i
     @breakfast = options['breakfast']
     @room_type = options['room_type']
@@ -29,12 +30,14 @@ class Booking
     sql = "INSERT INTO bookings (
       first_name,
       last_name,
+      booking_date,
       number_of_nights,
       breakfast,
       room_type
     ) VALUES (
         '#{ @first_name }',
         '#{ @last_name }',
+        '#{ @booking_date }',
         '#{ @number_of_nights }',
         '#{ @breakfast }',
         '#{ @room_type }'
